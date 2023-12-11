@@ -1,0 +1,28 @@
+//49. Group Anagrams
+// Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams = function (strs) {
+  //create empty object map
+  const map = {}
+  //loop through array of strings
+  for (let i = 0; i < strs.length; i++) {
+    //sort string and assign as key
+    const key = strs[i].split('').sort().join('')
+    //check if the key exists
+    if (!map[key]) {
+      //if not assign the key to map object and value as the string inside an array
+      map[key] = [strs[i]]
+    } else {
+      //if the key already exists, push the string to the array
+      map[key].push(strs[i])
+    }
+  }
+  //return the map's values
+  return Object.values(map)
+}
