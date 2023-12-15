@@ -1,0 +1,36 @@
+//78. Subsets
+//Given an integer array nums of unique elements, return all possible subsets (the power set).
+
+// The solution set must not contain duplicate subsets. Return the solution in any order.
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var subsets = function (nums) {
+  //empty array to store the subsets
+  const result = []
+  //backtracking approach,generates subsets recursively
+  //start parameter to avoid duplicate subsets.
+  function backtrack(start, currentSubset) {
+    result.push([...currentSubset])
+    // DFS is implemented through recursion. The function explores all possible subsets by iterating over the elements
+    for (let i = start; i < nums.length; i++) {
+      currentSubset.push(nums[i])
+      backtrack(i + 1, currentSubset)
+      // remove it before moving on to the next iteration to allow the algorithm to explore all possible combinations.
+      currentSubset.pop()
+    }
+  }
+  //initisal call
+  backtrack(0, [])
+
+  return result
+}
+
+//arrow function expression
+//a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:
+
+// Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
+// Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
+// Arrow functions cannot use yield within their body and cannot be created as generator functions.
