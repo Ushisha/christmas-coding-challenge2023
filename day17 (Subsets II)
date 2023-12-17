@@ -1,0 +1,34 @@
+//90. Subsets II
+// Given an integer array nums that may contain duplicates, return all possible
+// subsets
+//  (the power set).
+
+// The solution set must not contain duplicate subsets. Return the solution in any order.
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var subsetsWithDup = function (nums) {
+  //sort nums alphabetically
+  nums.sort((a, b) => a - b)
+  //create empty array to store subsets
+  let powerSet = []
+  //deep first search function
+  var dfs = function (cur, index) {
+    powerSet.push([...cur])
+    //loop through nums
+    for (let i = index; i < nums.length; i++) {
+      //check if the number is dupricate if so skip
+      if (i != index && nums[i] === nums[i - 1]) continue
+      cur.push(nums[i])
+      //recursive function call itself with index increased by 1
+      dfs(cur, i + 1)
+
+      cur.pop()
+    }
+  }
+  //initial call
+  dfs([], 0)
+  return powerSet
+}

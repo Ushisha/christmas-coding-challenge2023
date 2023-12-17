@@ -22,7 +22,7 @@ var subsets = function (nums) {
       currentSubset.pop()
     }
   }
-  //initisal call
+  //initial call
   backtrack(0, [])
 
   return result
