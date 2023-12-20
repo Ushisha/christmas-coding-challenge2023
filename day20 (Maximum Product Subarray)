@@ -1,0 +1,36 @@
+//152. Maximum Product Subarray
+// Given an integer array nums, find a
+// subarray
+//  that has the largest product, and return the product.
+
+// The test cases are generated so that the answer will fit in a 32-bit integer.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxProduct = function (nums) {
+  //initialize a variable res with the max value found inthe nums array as an initial value for comparison
+  let res = Math.max(...nums)
+  //initialize two variables to be used to keep track of max and mim product eniding at the current postion in the array
+  let curMax = 1,
+    curMin = 1
+  //iterate through nums array each element
+  for (let num of nums) {
+    //temporary variable to store the product of the current max and the current number
+    let temp = curMax * num
+    //updates curMax to be the max of three values: the product of the current number and current max,the product of the current number and current min, and the current number itself
+    curMax = Math.max(num * curMax, num * curMin, num)
+    //updates curMin to be the min of three values: the temp priduct, the produt of the current number and the current min, the current number itself.
+    curMin = Math.min(temp, num * curMin, num)
+    //update the variable res tobe the max of three values: the current res, curMax, curMin to ensure that res always contains the max product seen so far
+    res = Math.max(res, curMax, curMin)
+  }
+  return res
+}
+
+//A 32-bit signed integer. It has a minimum value of -2,147,483,648 and a maximum value of 2,147,483,647 (inclusive).
+
+//A subarray is a contiguous non-empty sequence of elements within an array.
+
+//The Math.max() static method returns the largest of the numbers given as input parameters, or -Infinity if there are no parameters.
