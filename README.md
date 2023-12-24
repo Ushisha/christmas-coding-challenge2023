@@ -9,3 +9,9 @@ At least 1 hour of coding practice every day for the 25 days leading to Christma
 - Code for minimum an hour a day.
 - Every your day of coding, submit your work on the GitHub / GitLab.
 - After 25th of December share link to your repository in WWCode London Slack channel #christmas-coding-challenge
+
+## Merry Christmas 2023!!
+
+[Let it snow, let it snow, let it snow!](https://ushisha.github.io/christmas-coding-challenge2023/)
+
+![](./christmas_card/christmas.png)
