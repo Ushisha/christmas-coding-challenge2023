@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Animated Snow Effect</title>
+    <title>Animated Snow Effect / Christmas Card 2023</title>
   </head>
   <body>
     <script>
       function createSnowflake() {
         const snowflake = document.createElement('div')
         snowflake.className = 'snowflake'
-        const randomSize = Math.random() * 10 + 5 // Adjust the range of sizes as needed
-        // Apply different classes to make some snowflakes more transparent
+        const randomSize = Math.random() * 10 + 5
         if (Math.random() > 0.5) {
           snowflake.classList.add('opaque')
         } else {

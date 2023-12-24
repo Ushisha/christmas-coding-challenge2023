@@ -1,11 +1,11 @@
 body {
-  margin: 0;
+  margin: auto;
   overflow: hidden;
   background-image: url(christmas.png);
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
 }
 
 .snowflake {
