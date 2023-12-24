@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-image: url(christmas.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fall linear infinite;
+}
+.opaque {
+  background-color: #fff;
+}
+
+.semi-transparent {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Adjust the alpha (fourth) parameter for transparency */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}

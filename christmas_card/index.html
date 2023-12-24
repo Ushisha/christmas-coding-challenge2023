@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animated Snow Effect</title>
+  </head>
+  <body>
+    <script>
+      function createSnowflake() {
+        const snowflake = document.createElement('div')
+        snowflake.className = 'snowflake'
+        const randomSize = Math.random() * 10 + 5 // Adjust the range of sizes as needed
+        // Apply different classes to make some snowflakes more transparent
+        if (Math.random() > 0.5) {
+          snowflake.classList.add('opaque')
+        } else {
+          snowflake.classList.add('semi-transparent')
+        }
+        snowflake.style.width = `${randomSize}px`
+        snowflake.style.height = `${randomSize}px`
+        snowflake.style.left = `${Math.random() * window.innerWidth}px`
+        snowflake.style.animationDuration = `${Math.random() * 6 + 4}s`
+        snowflake.style.animationDelay = `-${Math.random()}s`
+        document.body.appendChild(snowflake)
+
+        snowflake.addEventListener('animationiteration', () => {
+          snowflake.style.left = `${Math.random() * window.innerWidth}px`
+        })
+
+        return snowflake
+      }
+
+      function createSnowfall() {
+        for (let i = 0; i < 50; i++) {
+          createSnowflake()
+        }
+      }
+
+      window.onload = createSnowfall
+    </script>
+  </body>
+</html>
