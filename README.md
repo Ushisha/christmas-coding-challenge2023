@@ -6,7 +6,7 @@ At least 1 hour of coding practice every day for the 25 days leading to Christma
 
 - Code for minimum an hour a day.
 - Every your day of coding, submit your work on the GitHub / GitLab.
-- After 25th of December share link to your repository in WWCode London Slack channel #christmas-coding-challenge
+- After 25th of December share link to your repository in [WWCode London Slack channel](https://wwcodelondon.slack.com/join/shared_invite/enQtNjgwNjc4Nzk1MTQxLTU0NjkwMDBkYWIwZjVmYzBjZDkzMzJiM2YyYzU1ODdhZDM3YzU2ZjMyNzE4NWZhNTE0YTRlZGU5NmI1NTkwMDY#/shared-invite/email) #christmas-coding-challenge
 
 [WWC Event Link](https://www.meetup.com/women-who-code-london/events/297263928/)
 
