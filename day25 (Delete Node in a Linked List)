@@ -1,0 +1,18 @@
+//237. Delete Node in a Linked List
+//There is a singly-linked list head and we want to delete a node node in it.
+
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val
+  this.next = next === undefined ? null : next
+}
+
+/**
+ * @param {ListNode} node
+ * @return {void} Do not return anything, modify node in-place instead.
+ */
+var deleteNode = function (node) {
+  // Copy the value of the next node to the current node
+  node.val = node.next.val
+  //Delete the next node by updating the next pointer
+  node.next = node.next.next
+}
